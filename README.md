@@ -1,5 +1,9 @@
 Trello
 
+Instalação
+
+npx create-react-app trello
+
 <b>Os componentes que foram utilizados:</b>
 
 npm install react-beautiful-dnd --save<br>

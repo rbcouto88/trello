@@ -28,7 +28,7 @@ Poderá realizar as seguintes operações:
       - Excluir: para excluir uma tarefa, clique na mesma e abrirá um pop up com a opção de excluir;
       - Ordenar: clique na tarefa para movê-la;
   - Mover cartões entre colunas: clique em um cartão pars arrastá-lo;
-  - Filtrar os cartões por texto, tag ou responsável: poderá filtrar digitando uma parte do conteúdo da tarefa ou através dos filtros avançados que você poderá clicar nas tags ou responsável. <i>Obs: para retornar a listagem original só desmarcar as opções escolhidas ou limpar o filtro.</i>
+  - Filtrar os cartões por texto, tag ou responsável: poderá filtrar digitando uma parte do conteúdo da tarefa ou através dos filtros avançados (você poderá clicar nas tags ou responsável). <i>Obs: para retornar a sua listagem original, desmarcarque as opções escolhidas.</i>
 
 Para o back-end, foi utilizado o json-server! Para acessá-lo, execute o comando:<br>
 

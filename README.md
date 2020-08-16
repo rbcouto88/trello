@@ -2,9 +2,9 @@ Trello
 
 <b>Os componentes que foram utilizados:</b>
 
-npm install react-beautiful-dnd --save
-npm install react-icons --save
-npm install sweetalert2
+npm install react-beautiful-dnd --save<br>
+npm install react-icons --save\n
+npm install sweetalert2\n
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Swal from "sweetalert2";

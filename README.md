@@ -1,6 +1,6 @@
 Trello
 
-<b>Os componentes que foram utilizados:</>
+<b>Os componentes que foram utilizados:<b/>
 
 npm install react-beautiful-dnd --save
 npm install react-icons --save

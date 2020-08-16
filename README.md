@@ -5,10 +5,12 @@ Trello
 npm install react-beautiful-dnd --save<br>
 npm install react-icons --save<br>
 npm install sweetalert2<br>
+npm install axios<br>
 
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';<br>
 import Swal from "sweetalert2";<br>
 import { FiMoreVertical, FiChevronDown } from 'react-icons/fi';<br>
+import axios from 'axios';<br>
 
 Você poderá realizar as seguintes operações:
   - Colunas

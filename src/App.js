@@ -362,7 +362,7 @@ const App = () => {
                   '</tr></table>',
             showCancelButton: true,
             confirmButtonText: 'Alterar',
-            cancelButtonText: 'Cancelar',            
+            cancelButtonText: 'Excluir',            
             preConfirm: () => {
                 let mdTask   = Swal.getPopup().querySelector('#mdTask').value;
                 let mdPeople = Swal.getPopup().querySelectorAll('.mdPeople');
@@ -371,15 +371,15 @@ const App = () => {
                 return {mdTask: mdTask, mdPeople: mdPeople, mdTags: mdTags}
             }
         }).then((result) => {
+            const indexColumn = Object.values(board.map((x, index) => { if(parseInt(x.id) === parseInt(columnProps.id)) { return index; } })).join('');
             if(result.isConfirmed)
             {
                 const pessoas     = Array.prototype.slice.call(result.value.mdPeople).filter(e => e.checked).map((z) => z.value.split('-'));
                 const tagsList    = Array.prototype.slice.call(result.value.mdTags).filter(e => e.checked).map((z) => z.value);
                 const arrPessoas  = pessoas.map((e) => { return { "id": parseInt(e[0]), "name": e[1], "photoURL": e[2]} });
-                const indexColumn = Object.values(board.map((x, index) => { if(parseInt(x.id) === parseInt(columnProps.id)) { return index; } })).join('');
                 const indexTask   = Object.values(board.map(x => { if(parseInt(x.id) === parseInt(columnProps.id)) { return x.cards; }})
-                                                       .filter(z => z !== undefined)
-                                                       .map(v => { return v.map((b, index) => {if(b.id === props.id) { return index; } })})[0]).join('');
+                                                    .filter(z => z !== undefined)
+                                                    .map(v => { return v.map((b, index) => {if(b.id === props.id) { return index; } })})[0]).join('');    
                 
                 const newState = { ...board, [indexColumn] : { id: columnProps.id, title: columnProps.title, 
                     cards: Object.values({ ...columnProps.cards, [indexTask]: {
@@ -391,6 +391,30 @@ const App = () => {
                 }}
                 setBoard(Object.values(newState));
                 alterarBoard(Object.values(newState));
+            }
+            else
+            {
+                Swal.fire({
+                    title: `Você tem certeza que deseja excluir?`,
+                    showCancelButton: true,
+                    icon: 'question',
+                    confirmButtonText: 'Sim',
+                    cancelButtonText: 'Não'
+                }).then((result) => {
+                    if(result.isConfirmed)
+                    {
+                        const filteredTask = board.filter((x, index) => parseInt(index) === parseInt(indexColumn)).map(z => z.cards.filter(a => a.id !== props.id));
+                        const newState = {
+                            ...board, [indexColumn] : {
+                                id: columnProps.id,
+                                title: columnProps.title,
+                                cards: filteredTask[0]
+                            }
+                        };
+                        setBoard(Object.values(newState));
+                        alterarBoard(Object.values(newState));
+                    }
+                })
             }
         })
     }

@@ -30,8 +30,8 @@ Poderá realizar as seguintes operações:
   - Mover cartões entre colunas: clique em um cartão pars arrastá-lo;
   - Filtrar os cartões por texto, tag ou responsável: poderá filtrar digitando uma parte do conteúdo da tarefa ou através dos filtros avançados que você poderá clicar nas tags ou responsável. Obs: para retornar a sua listagem original só desmarcar as opções escolhidas.
 
-Para o back-end, foi utilizado o json-server! Para acessá-lo, execute o comando:<br><br>
+Para o back-end, foi utilizado o json-server! Para acessá-lo, execute o comando:<br>
 
-npm install -g json-server<br><br>
+npm install -g json-server<br>
 
 json-server --watch db.json --port 3005

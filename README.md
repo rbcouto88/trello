@@ -1,6 +1,6 @@
 Trello
 
-Instalação
+Instalação:
 
 npx create-react-app trello
 
@@ -16,22 +16,22 @@ import Swal from "sweetalert2";<br>
 import { FiMoreVertical, FiChevronDown } from 'react-icons/fi';<br>
 import axios from 'axios';<br>
 
-Você poderá realizar as seguintes operações:
+Poderá realizar as seguintes operações:
   - Colunas
-      - Criar (clicar no campo que está indicando +COLUNAS);
-      - Renomear (para renomear uma coluna, basta passar o mouse sobre os 3 pontos e irá aparecer a opção);
-      - Excluir (para excluir uma coluna, basta passar o mouse sobre os 3 pontos e irá aparecer a opção);
-      - Ordenar (basta clicar no nome da coluna e move-lá).
+      - Criar: clique no campo que está indicando +COLUNAS;
+      - Renomear: para renomear uma coluna, passe o mouse sobre os três pontos e aparecerá a opção;
+      - Excluir: para excluir uma coluna, passe o mouse sobre os três pontos e aparecerá a opção;
+      - Ordenar: clique no nome da coluna para move-lá.
   - Cartões
-      - Criar (clicar no campo que está indicando +TAREFAS - Obs: Apenas o campo tarefa é obrigatório);
-      - Editar (para editar uma tarefa, basta clicar na tarefa e alterar as informações);
-      - Excluir (para excluir uma tarefa, basta clicar na tarefa que irá abrir um pop up com a opção de excluir);
-      - Ordenar (basta clicar na tarefa e move-lá).
-  - Mover cartões entre colunas (basta clicar em um cartão e arrasta-lo)
-  - Filtrar os cartões por texto, tag e/ou responsável (Poderá filtrar digitando uma parte do conteúdo da tarefa, ou através dos filtros avançados que você poderá clicar nas tags ou responsável, para o filtro retornar a sua listagem original só desmarcar as opções escolhidas)
+      - Criar: clique no campo que está indicando +TAREFAS (Obs.: Apenas o campo tarefa é obrigatório);
+      - Editar: para editar uma tarefa, clique nela e altere as informações);
+      - Excluir: para excluir uma tarefa, clique na mesma e abrirá um pop up com a opção de excluir;
+      - Ordenar: clique na tarefa para movê-la;
+  - Mover cartões entre colunas: clique em um cartão pars arrastá-lo;
+  - Filtrar os cartões por texto, tag ou responsável: poderá filtrar digitando uma parte do conteúdo da tarefa ou através dos filtros avançados que você poderá clicar nas tags ou responsável. Obs: para retornar a sua listagem original só desmarcar as opções escolhidas.
 
-Para o back-end foi utilizado o json-server para acessar executar o comando:<br>
+Para o back-end, foi utilizado o json-server! Para acessá-lo, execute o comando:<br><br>
 
-npm install -g json-server
+npm install -g json-server<br><br>
 
 json-server --watch db.json --port 3005
